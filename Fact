@@ -1,0 +1,18 @@
+
+
+3 TYPES of Measures in a FACT Table
+The numeric measures in a fact table fall into three categories. 
+
+1)Fully additive
+  The most ﬂexible and useful facts are fully additive; 
+  additive measures can be summed across any of the dimensions associated with the fact table.
+  An example of a fully additive measure is sales (purchases from a store). 
+  You can add hourly sales to get the sales for a day, week, month, quarter, or year. You can add sales across stores or regions.
+2)Semi-additive
+  Semi-additive measures can be summed across some dimensions, but not all; 
+  checking account or savings account balance amounts are common semi-additive facts. You can recreate a balance amount from the transactions file, 
+  but it doesn't make any sense to add the balance amounts from October, November, and December (across the time dimension).
+3)Non-additive
+  Finally, some measures are completely non-additive, such as ratios. 
+  A good approach for non-additive facts is, where possible, to store the fully additive components of the non-additive measure and sum these components into the ﬁnal answer set. 
+  Finally, you calculate the ﬁnal non-additive fact.
