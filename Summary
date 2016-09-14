@@ -1,0 +1,42 @@
+DWH
+
+Purpose
+  reporting, star schema
+  integratoin
+  predictive anlytics
+  
+OLAP vs. OLTP
+  OLTP: Transactional, Normalized,DML
+  OLAP: Optimize for data aggregation, selection. De-nomailize
+  
+Data Mart
+  small scale dwh
+  design for a special business function
+  
+ETL
+  design
+  
+Kimball vs. Inmon
+
+Star Schema vs Snow-flake schema
+  dimension is nomalized or not
+  star schema: e.g. product dimension 
+  snaw-flake: e.g. product, sub-category, category
+
+Dimension
+  SCD
+  RCD
+  Type of dimensions: 
+    compformed: the dimension that is shared accross multiple subject area
+    degenerated: 
+    junk
+    role-playing
+    
+  
+FACT
+  Additive, semi-additive, non-additive
+
+
+  
+  
+
