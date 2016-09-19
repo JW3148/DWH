@@ -1,0 +1,36 @@
+Rapid Changing Dimension
+dimension attribute that changes very frequently,
+for example, a custom status may change pretty frequently because of his buying bahaviour
+for example, stock portifolio risk indicatior change day by day
+
+Issue: This gonna be a problem when you want to implement this column as Type 2 SCD, i.e you want to keep historical info.
+as a type 2 SCD, each time a change happens, you need to add a records. 
+
+Gonna be too many records!!!
+
+Solution: Junk Dimension with Conjunctioned table
+
+Put the rapid changing attribute in to a Junk Dimension
+  one time load, with all combinatinations.
+
+Create a conjunction table
+  many to many relation ship: 
+  one record in the parent dimention can be associate multiple records in just dimenesion
+  (i.e. current and historical); one record in the junk corresbonding to multple record in the parent demension
+  
+Maintain:
+  a change in RCD attribute --> add new reocord in con table, mark as active
+  a change in type 2 SCD in parent dimension.this will cause new key added the parental dimension
+  --> therefore new key need to be added to the conjuncated table, point to the same junk key, both active
+  a change happens same time --> SCD THEN RCD
+  
+  
+IMPLEMENTATION
+  NEW DIM
+  SCD1
+  SCD2
+  SCD2 RCD
+  
+  
+  
+  
