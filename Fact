@@ -16,3 +16,12 @@ The numeric measures in a fact table fall into three categories.
   Finally, some measures are completely non-additive, such as ratios. 
   A good approach for non-additive facts is, where possible, to store the fully additive components of the non-additive measure and sum these components into the ﬁnal answer set. 
   Finally, you calculate the ﬁnal non-additive fact.
+  
+
+Factless fact and coverage fact
+  Factless fact: like a conjuncted dimension to deal with many to many relationship. 
+    e.g. student teacher example, in factless fact, you will only have studentID, the teacherID
+  Coverage fact: there are some question factless fact cant't answer
+    e.g. which student don't have any teacher to teach? which teacher don't have any student to teach
+    Suppose you have 100 stu, 5 teachers, you will have 5x100 entries in the fact table.
+    an actural relation will be mark as 1, otherwith 0
