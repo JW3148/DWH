@@ -1,0 +1,15 @@
+Bill Inmon
+  top down design
+  centralized DW --> functional datamart
+  
+
+Ralph Kimball
+  bottom-up design
+  spcific datamart --> EDW
+  
+
+usually in real world, would be a combination of both
+
+Star Schema
+
+Snowflake Schema
