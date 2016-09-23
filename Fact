@@ -23,6 +23,15 @@ Transactional – Transactional fact table is the most basic one that each grain
 Periodic snapshots – Periodic snapshots fact table stores the data that is a snapshot in a period of time. The source data of periodic snapshots fact table is data from a transaction fact table where you choose a period to get the output.
 Accumulating snapshots – The accumulating snapshots fact table describes the activity of a business process that has clear beginning and end. This type of fact table, therefore, has multiple date columns to represent milestones in the process. A good example of accumulating snapshots fact table is processing of a material. As steps towards handling the material are finished, the corresponding record in the accumulating snapshots fact table gets updated.
 
+Transactional vs. Snapshot(cumulative)
+  Transactional(instance) --> can be converted to snapshot by aggregation
+  Snapshot: granularity, one record in fact = a customer, a day, sales up to the loading time
+    loading: source from OLTP(Transational source)
+      incremental: only select the new trans after the prevous loading time
+      AGGREGATE FIRST? then done?
+      new customer, add new line
+      exist customer, first seen in a day, add new line
+      exist customer, not first in a day, accumulate
 
 
 
