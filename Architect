@@ -1,0 +1,34 @@
+source data
+  txt files
+  excel files
+  csv files
+  sql server,
+  oracle
+  ..
+  
+ETL
+  consolidate
+  clean up
+  aggregate
+  formatting
+  transformation
+
+Staging Area
+   
+Data Mart
+  specific subject area
+  dimentioann structure
+  fact and dimentions
+  dimension keys
+  query datamart
+  
+Cubes
+  build on top of dimension and facts
+  pre-aggreated or pre-calucte
+  effeciently navigate large amount of data
+  pivot table connect to cube
+ 
+Datawarehouse
+  conbination of all data mart
+  
+Business process
